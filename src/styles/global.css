@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  min-height: calc(100vh - 91px);
+
+  justify-content: center;
+} 
+
+.loading, .error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: normal normal 500 1rem "Roboto", sans-serif;
+}
+
+.error {
+  color:#FF0000;
+}
+
+
+.activity {
+  position: relative;
+  width: 96%;
+  height: 260px;
+  padding: 16px 16px 48px 16px;
+  margin-bottom: 50px;
+
+  background-color: #FBFBFB;
+}
+
+.activity .recharts-legend-item-text {
+  color: #74798c !important;;
+  font: normal normal 500 0.875rem "Roboto", sans-serif;
+  margin: 0;
+}
+
+.sessionAverage {
+  position: relative;
+  border-radius: 5px;
+  background-color: #FF0000;
+  width: 332px;
+  height: 295px;
+}
+
+.sessionAverage .recharts-cartesian-axis-ticks {
+  padding: 0 16px;
+}
+
+.performance {
+  position: relative;
+  border-radius: 5px;
+  background-color: #282D30;
+  width: 300px;
+  height: 263px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.score {
+    position: relative;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+    width: 300px;
+    height: 263px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+@media(min-width: 1240px) {
+  .activity {
+    height: 320px;
+  }
+
+  .performance {
+    margin-top: 0;
+  }
+
+  .score {
+    margin-top: 0;
+  }
+}
