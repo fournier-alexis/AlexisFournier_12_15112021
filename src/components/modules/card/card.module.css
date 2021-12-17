@@ -1,0 +1,36 @@
+.card {
+    width: 258px;
+    height: 124px;
+    border-radius: 5px;
+
+    background-color: #FBFBFB;
+    display: flex;
+    align-items: center;
+
+    margin-top: 16px;
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.icon {
+    margin-left: 32px;
+}
+
+.values h1 {
+    font: normal normal 700 1.25rem "Roboto", sans-serif;
+}
+
+.values h2 {
+    color: #74798C;
+    font: normal normal 700 0.875rem "Roboto", sans-serif;
+}
+
+@media(min-width: 1240px) {
+    .card {
+        margin-top: 0;
+    }
+}

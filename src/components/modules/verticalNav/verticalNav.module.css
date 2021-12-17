@@ -1,0 +1,36 @@
+.verticalNav {
+    width: 7%;
+    max-width: 117px;
+    min-width: 117px;
+
+    background-color: #020203;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    z-index: 5;
+}
+
+.verticalNav nav {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 75%;
+}
+
+.verticalNav a {
+    margin-bottom: 20px;
+    transition: all 500ms ease;
+}
+
+.verticalNav a:hover {
+    transform: scale(1.1);
+}
+
+.copiryght {
+    color: white;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    font: normal normal 500 0.75rem "Roboto", sans-serif;
+}

@@ -1,0 +1,66 @@
+.dashboard {
+    width: 87%;
+    margin: 0;
+    padding: 3% 7% 3% 7%;
+}
+
+.dashboard h1 {
+    margin: 0;
+    color: black;
+    font: normal normal 500 3rem "Roboto", sans-serif;
+}
+
+.dashboard h2 {
+    margin: 2% 0 0;
+    font: normal normal 400 1.125rem "Roboto", sans-serif;
+}
+
+.dashboard h3 {
+    margin: 0;
+    font: normal normal 500 0.9rem "Roboto", sans-serif;
+}
+
+.colorRed {
+    color: #ff0101;
+}
+
+.datas {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.graphs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.resume {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.keydata {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+@media(min-width: 1240px) {
+    .datas {
+        flex-direction: row;
+    }
+
+    .graphs {
+        width: 80%;
+    }
+
+    .keydata {
+        flex-direction: column;
+    }
+}

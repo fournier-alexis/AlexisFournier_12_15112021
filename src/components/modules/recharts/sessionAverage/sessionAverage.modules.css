@@ -1,0 +1,20 @@
+.customTooltip {
+    background-color: white;
+    padding: 5px 12px;
+}
+
+.label {
+    color: white;
+    font: normal normal 500 0.438rem "Roboto", sans-serif;
+    text-align: center;
+    padding: 5px 0
+}
+
+.title {
+    position: absolute;
+    left: 13%;
+    top: 10%;
+
+    width: 147px;
+    color: #FFFFFF75
+}

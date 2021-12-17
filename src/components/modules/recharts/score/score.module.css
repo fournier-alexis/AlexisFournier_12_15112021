@@ -1,0 +1,18 @@
+.value {
+    position: absolute;
+    top: 42%;
+    left: 35%;
+    width: 95px;
+    text-align: center;
+}
+
+.value h4 {
+    margin: 0;
+    font: normal normal bold 1.625rem "Roboto", sans-serif;
+}
+
+.value p {
+    margin: 0;
+    color: #797e90;
+    font: normal normal 500 1rem "Roboto", sans-serif;
+}
