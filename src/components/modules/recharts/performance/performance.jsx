@@ -1,8 +1,9 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import {traduct} from "./../../../../utils/utils";
 import PropTypes from 'prop-types';
+import {DtoPerformance} from "../../../../types/DtoPerformance"
 
-Performance.propTypes = {
+DtoPerformance.propTypes = {
     userId: PropTypes.number,
     kind: PropTypes.shape({
         [PropTypes.number]: PropTypes.string
@@ -17,6 +18,7 @@ Performance.propTypes = {
 
 /**
  * Return a radarchart with user stats 
+ * @param {DtoPerformance} performance
  * @returns {JSX.Element}
  */
 export default function Performance({performance}){

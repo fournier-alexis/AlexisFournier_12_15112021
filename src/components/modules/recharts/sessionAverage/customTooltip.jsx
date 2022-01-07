@@ -2,6 +2,8 @@ import style from "./sessionAverage.modules.css";
 
 /**
  * Return custom linechart tooltip
+ * @param {boolean} active
+ * @param {[any]} payload
  * @returns {JSX.Element}
  */
 export function CustomTooltip({ active, payload }) {

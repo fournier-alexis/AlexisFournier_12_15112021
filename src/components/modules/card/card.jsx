@@ -10,6 +10,10 @@ Card.propTypes = {
 
 /**
  * Return a card fot a keydata
+ * @param {String} label
+ * @param {Number} value
+ * @param {String} unit 
+ * @param {any} icon
  * @returns {JSX.Element}
  */
 export default function Card ({

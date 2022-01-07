@@ -4,6 +4,7 @@ import { getDayLetter } from "../../../../utils/utils";
 import { CustomTooltip } from "./customTooltip";
 import { CustomDot } from './customDot';
 import PropTypes from 'prop-types';
+import { DtoAverage } from '../../../../types/DtoAverage';
 
 SessionAverage.propTypes = {
     sessionsAverage: PropTypes.arrayOf(
@@ -16,6 +17,7 @@ SessionAverage.propTypes = {
 
 /**
  * Return a linechart graph for average sessions
+ * @param {{sessions: DtoAverage}} sessionsAverage
  * @returns {JSX.Element}
  */
 export default function SessionAverage(sessionsAverage) {

@@ -10,6 +10,7 @@ export default function Welcome(props) {
     /**
      * Send the new user id to parent
      * @param {*} event 
+     * @returns {void}
      */
     function selectUser(event) {
         const value = event.target.textContent;

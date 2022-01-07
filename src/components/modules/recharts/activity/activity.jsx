@@ -2,8 +2,9 @@ import style from "./activity.module.css"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import CustomTooltip from "./customTooltip";
+import DtoActivity from "../../../../types/DtoActivity"
 
-Activity.ptopTypes = {
+Activity.propTypes = {
     activity: PropTypes.shape({
         userId: PropTypes.number,
         sessions: PropTypes.arrayOf(
@@ -18,6 +19,7 @@ Activity.ptopTypes = {
 
 /**
  * Return the bar graph with user activity
+ * @param {DtoActivity} activity
  * @returns {JSX.Element}
  */
 export default function Activity({activity}) {

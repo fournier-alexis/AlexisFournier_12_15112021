@@ -3,8 +3,12 @@ import React, {useEffect, useState} from "react";
 import Header from "./components/modules/header/header";
 import VerticalNav from "./components/modules/verticalNav/verticalNav";
 import Dashboard from "./components/views/dashboard/dashboard";
-import { getOneUserById, getPerformance, getSessionAverage, getUserActivity } from "./model/Api.service";
+import { getOneUserById, getPerformance, getSessionAverage, getUserActivity } from "./model/mock.api.service";
 import Welcome from "./components/views/welcome/welcome";
+import { DtoUser } from "./types/DtoUser";
+import { DtoActivity } from "./types/DtoActivity";
+import { DtoAverage } from "./types/DtoAverage";
+import { DtoPerformance } from "./types/DtoPerformance";
 
 /**
  * Return the complete page
@@ -21,32 +25,37 @@ export default function App() {
   const [sessionAverage, setSessionAverage] = useState(undefined);
   const [performance, setPerformance] = useState(undefined);
 
+  /**
+   * Select a user to show
+   * @param {Number} id 
+   */
   const selectUser = (id) => {
     setUserId(id)
   }
 
   /**
    * Load all data's
+   * @returns {void}
    */
   useEffect(() => {
     const loadUser = async () => {
       const user = await getOneUserById(userId);
-      setUser(user.data);
+      setUser(new DtoUser(user.data.id, user.data.userInfos, user.data.todayScore || user.data.score, 0, user.data.keyData));
     }
 
     const loadActivity = async () => {
       const activity = await getUserActivity(userId);
-      setActivity(activity.data);
+      setActivity(new DtoActivity(activity.data.userId, activity.data.sessions));
     }
 
     const loadSessionAverage = async () => {
       const average = await getSessionAverage(userId);
-      setSessionAverage(average.data);
+      setSessionAverage(new DtoAverage(average.data.userId, average.data.sessions));
     }
 
     const loadPerformance = async () => {
       const performance = await getPerformance(userId);
-      setPerformance(performance.data);
+      setPerformance(new DtoPerformance(performance.data.userId, performance.data.kind, performance.data.data));
     }
 
     (user === undefined || user.id !== userId) && Promise.all([
@@ -62,6 +71,7 @@ export default function App() {
       setError(true)
     })
   }, [user, userId]);
+
 
   if(isLoading){
     return (

@@ -1,5 +1,7 @@
 /**
  * Return custom linechart dot
+ * @param {Number} cx
+ * @param {Number} cy
  * @returns {JSX.Element}
  */
 export function CustomDot({cx, cy}) {

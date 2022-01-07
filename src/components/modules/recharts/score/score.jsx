@@ -8,6 +8,7 @@ Score.propTypes = {
 
 /**
  * Return a piechart with user score
+ * @param {{score: Number}} score
  * @returns {JSX.Element}
  */
 export default function Score(score){

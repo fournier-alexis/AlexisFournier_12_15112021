@@ -6,6 +6,10 @@ import Performance from "./../../modules/recharts/performance/performance";
 import Score from "./../../modules/recharts/score/score";
 import Card from "./../../modules/card/card";
 import {getIcon, getUnit, getLabel} from "./../../../utils/utils";
+import { DtoUser } from "../../../types/DtoUser";
+import { DtoActivity } from "../../../types/DtoActivity";
+import { DtoAverage } from "../../../types/DtoAverage";
+import { DtoPerformance } from "../../../types/DtoPerformance";
 
 Dashboard.propTypes = {
     user: PropTypes.shape({
@@ -61,6 +65,10 @@ Dashboard.propTypes = {
 
 /**
  * Return a page that group all graphs and datas for an user
+ * @param {DtoUser} user
+ * @param {DtoActivity} activity
+ * @param {DtoAverage} sessionAverage
+ * @param {DtoPerformance} performance
  * @returns {JSX.Element}
  */
 export default function Dashboard({
