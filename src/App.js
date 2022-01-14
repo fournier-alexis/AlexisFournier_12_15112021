@@ -3,13 +3,12 @@ import React, {useEffect, useState} from "react";
 import Header from "./components/modules/header/header";
 import VerticalNav from "./components/modules/verticalNav/verticalNav";
 import Dashboard from "./components/views/dashboard/dashboard";
-import { getOneUserById, getPerformance, getSessionAverage, getUserActivity } from "./model/mock.api.service";
 import Welcome from "./components/views/welcome/welcome";
 import { DtoUser } from "./types/DtoUser";
 import { DtoActivity } from "./types/DtoActivity";
 import { DtoAverage } from "./types/DtoAverage";
 import { DtoPerformance } from "./types/DtoPerformance";
-
+import dataSource from "./services";
 /**
  * Return the complete page
  * @returns {JSX.Element}
@@ -24,6 +23,8 @@ export default function App() {
   const [activity, setActivity] = useState(undefined);
   const [sessionAverage, setSessionAverage] = useState(undefined);
   const [performance, setPerformance] = useState(undefined);
+
+  const { getOneUserById, getPerformance, getSessionAverage, getUserActivity } = dataSource;
 
   /**
    * Select a user to show
